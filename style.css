@@ -1,18 +1,97 @@
+:root {
+  --color-primary: #f8ad63;
+  --color-secondary: #dda162;
+  --color-tertiary: #d27c3b;
+  --color-quaternary: #b86e1f;
+  --color-quinary: #975b1b;
+}
+
+.text-shadows {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: calc(2rem + 5vw);
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  animation: shadows 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    transform: translate(-3px, -3px);
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    transform: translate(-6px, -6px);
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    transform: translate(-9px, -9px);
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
 .inicial{
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background: linear-gradient(#b4ed5a,#b4ed5a), url(https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 150px 25px;
+    position: relative;
+    overflow: hidden;
 }
 
 
 .search-container {
   background-color: #f1f1f1;
-  border-radius: 25px;
-  padding: 5px;
+  border-radius: 30px;
+  padding: 10px;
   width: 100%;
-  max-width: 400px;
-  border: 1px solid #ccc;
+  max-width: 500px;
+  border: 3px solid #f1a84e;
 }
 
 .search-input {
@@ -26,63 +105,11 @@
 
 body {
     height: 100vh;
-    margin: 0;
-    background: #85b585;
-    font-family: 'Arial', sans-serif;
 }
 
-.hover-container {
-    display: inline-block;
-    position: relative;
+h1{
+    font-size: 100px;
 }
-
-.explosive-text {
-    font-size: 3rem;
-    color: #fff;
-    letter-spacing: 0.1em;
-    display: inline-block;
-    position: relative;
-    transition: transform 0.3s ease-out;
+h3{
+    font-size: 33px;
 }
-
-.explosive-text:hover {
-    transform: scale(1.1);
-}
-
-.explosive-text:hover::before,
-.explosive-text:hover::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200%;
-    height: 200%;
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    animation: burst 0.8s ease-out forwards;
-}
-
-.explosive-text:hover::before {
-    background: radial-gradient(circle, rgba(16, 96, 29, 0.6), transparent);
-    z-index: -1;
-}
-
-.explosive-text:hover::after {
-    background: radial-gradient(circle, rgba(14, 82, 33, 0.6), transparent);
-    z-index: -2;
-}
-
-@keyframes burst {
-    0% {
-        transform: translate(-50%, -50%) scale(0);
-        opacity: 1;
-    }
-    70% {
-        opacity: 0.8;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(1.5);
-        opacity: 0;
-    }
-}
-
