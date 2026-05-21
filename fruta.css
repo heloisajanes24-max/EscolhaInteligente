@@ -1,0 +1,87 @@
+.inicial{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #96cb35;
+    background: linear-gradient(rgba(0, 0, 0, 0.244), rgba(0,0,0,0.244)), url(https://www.ype.ind.br/assets-NS/frutas_da_estacao_ypedia-scaled-1698513255.jpg) no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 150px 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.inicial div{
+  margin: 50px;
+}
+
+/*titulo/fundo*/
+body {
+    height: 100vh;
+    background-color: #ffc2d8;
+
+    h1 {
+        font-weight: bold;
+        display: inline-block;
+        text-underline-position: under;
+        text-decoration: underline #ff2c80;
+    }
+    h1:hover {
+        font-weight: bold;
+        display: inline-block;
+        text-underline-position: under;
+        text-decoration-style: wavy;
+
+    }
+}
+
+h1{
+    font-size: 100px;
+    color:rgba(246, 149, 190, 0.955);
+}
+
+p{
+    font-size: 50px; 
+    color:rgba(143, 74, 102, 0.955); 
+}
+
+/*fotos*/
+.processo {
+    display: flex;
+    flex-direction: row;
+}
+
+.processo p {
+    margin-left: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.gallery img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #801b3e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
