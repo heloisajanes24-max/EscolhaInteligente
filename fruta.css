@@ -47,13 +47,19 @@ p{
 }
 
 /*fotos*/
-.processo {
+.processo{
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    background-color: #ffd6e5;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.3s;
 }
 
-.processo p {
-    margin-left: 20px;
+.processo:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .gallery {
@@ -84,4 +90,78 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9em;
+}
+
+/* Botão de volta */
+.botao-voltar{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    background-color: #ff4f93;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.botao-voltar:hover{
+    background-color: #d81b60;
+    transform: scale(1.05);
+}
+
+/* Animação de etrada */
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.inicial{
+    animation: aparecer 1s ease;
+}
+
+.description{
+    animation: aparecer 1.2s ease;
+}
+
+.photos{
+    animation: aparecer 1.4s ease;
+}
+
+.curiosities{
+    animation: aparecer 1.6s ease;
+}
+
+.botao-voltar{
+    animation: aparecer 0.8s ease;
+}
+
+.processo{
+    animation: aparecer 1s ease;
+}
+
+ /* efeito do titulo */
+h1{
+    animation: flutuar 3s ease-in-out infinite;
+}
+@keyframes flutuar{
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-8px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
 }

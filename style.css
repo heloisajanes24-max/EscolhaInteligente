@@ -1,3 +1,4 @@
+/* efeito de titulo */
 :root {
   --color-primary: #f8ad63;
   --color-secondary: #dda162;
@@ -71,6 +72,7 @@
   }
 }
 
+/* base */
 .inicial{
     display:flex;
     align-items: center;
@@ -88,7 +90,7 @@
   margin: 50px;
 }
 
-
+/* barra de pesquisa */
 .search-container {
   background-color: #f1f1f1;
   border-radius: 30px;
@@ -107,6 +109,7 @@
   outline: none;
 }
 
+/* fundo e titulos */
 body {
     height: 100vh;
     background-color: #c6e8a9;
@@ -144,6 +147,7 @@ h3{
     font-size: 33px;
 }
 
+/* fotos */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -166,6 +170,7 @@ h3{
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* decorações */
 .curiosities-content {
     display: flex;
     flex-wrap: wrap;
@@ -197,3 +202,61 @@ h3{
     margin-bottom: 15px;
     font-size: 1.4em;
 }
+
+/* Navegação */
+.menu{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: #ffc35a;
+}
+
+/* final da tela */
+footer{
+    background-color: #f8b890;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Animação de etrada */
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.inicial{
+    animation: aparecer 1s ease;
+}
+
+.description{
+    animation: aparecer 1.2s ease;
+}
+
+.photos{
+    animation: aparecer 1.4s ease;
+}
+
+.curiosities{
+    animation: aparecer 1.6s ease;
+}
+
+/*  */
