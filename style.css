@@ -73,12 +73,18 @@
 }
 
 /* base */
+
+header{
+    padding: 10px;
+    
+}
+
 .inicial{
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(rgba(0, 0, 0, 0.244), rgba(0,0,0,0.244)), url(https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.244), rgba(0,0,0,0.244)), url(fundo.jpeg) no-repeat center center/cover;
     color: white;
     text-align: left;
     padding: 150px 25px;
@@ -90,47 +96,36 @@
   margin: 50px;
 }
 
-/* barra de pesquisa */
-.search-container {
-  background-color: #f1f1f1;
-  border-radius: 30px;
-  padding: 10px;
-  width: 100%;
-  max-width: 500px;
-  border: 5px solid #f1a84e;
-}
-
-.search-input {
-  flex-grow: 1;
-  border: none;
-  background: transparent;
-  padding: 10px;
-  font-size: 16px;
-  outline: none;
+#menu-frutas{
+    top: 20px;
+    left: 20px;
+    border: 10px solid white;
+    border-radius: 50px;
+    background-color: transparent;
 }
 
 /* fundo e titulos */
 body {
     height: 100vh;
     background-color: #c6e8a9;
-
-    h1 {
-        font-weight: bold;
-        display: inline-block;
-        text-underline-position: under;
-        text-decoration: underline #fb9f1e;
-    }
-    h1:hover {
-        font-weight: bold;
-        display: inline-block;
-        text-underline-position: under;
-        text-decoration-style: wavy;
-    }
 }
 
-h1{
+h1 {
+    font-weight: bold;
+    display: inline-block;
+    text-underline-position: under;
+    text-decoration: underline #fb9f1e;
     font-size: 100px;
 }
+
+h1:hover {
+    font-weight: bold;
+    display: inline-block;
+    text-underline-position: under;
+    text-decoration-style: wavy;
+}
+
+
 h2{
     font-size: 33px;
     color:rgb(253, 149, 38);
@@ -208,10 +203,11 @@ h3{
     position: absolute;
     top: 20px;
     right: 30px;
+    font-size: 25px;
 }
 
 .menu a{
-    color: white;
+    color: rgb(245, 190, 109);
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
@@ -219,12 +215,12 @@ h3{
 }
 
 .menu a:hover{
-    color: #ffc35a;
+    color: #b2dd8b;
 }
 
 /* final da tela */
 footer{
-    background-color: #f8b890;
+    background-color: #f8c5a6;
     color: white;
     text-align: center;
     padding: 20px;
@@ -258,5 +254,3 @@ footer{
 .curiosities{
     animation: aparecer 1.6s ease;
 }
-
-/*  */
